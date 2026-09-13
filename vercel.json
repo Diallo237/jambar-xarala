@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/a-propos", "destination": "/" },
+    { "source": "/a-propos/", "destination": "/" }
+  ]
+}
