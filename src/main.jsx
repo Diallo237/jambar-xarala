@@ -10,6 +10,10 @@ const solutions = [
   { number: '03', icon: Cloud, accent: 'red', title: 'Cloud & cybersécurité', text: 'Une infrastructure solide, souple et protégée pour faire grandir vos ambitions sans ralentir votre quotidien.', tags: ['Cloud', 'DevOps', 'Audit sécurité'] },
 ]
 
+const qrTarget = ['localhost', '127.0.0.1'].includes(window.location.hostname)
+  ? 'http://192.168.1.8:5175/a-propos'
+  : `${window.location.origin}/a-propos`
+
 function AboutPage() {
   return <div className="about-page professional-site" id="top">
     <div className="utility-bar"><span>J@mbAR_Xarala · Bureau d’innovation numérique</span><span><Globe2 size={13} /> Dakar · Sénégal <b>FR</b></span></div>
@@ -22,7 +26,7 @@ function AboutPage() {
       <section className="about-senegal"><div className="section-label">Notre ambition pour le Sénégal</div><h2>Faire du numérique<br /><span>un projet collectif.</span></h2><p>Nous voulons contribuer à un écosystème où les solutions locales répondent aux besoins locaux, où les compétences circulent et où chaque organisation peut prendre part à la prochaine économie.</p><div className="about-values"><div><strong>01</strong><span>Innover avec<br />responsabilité</span></div><div><strong>02</strong><span>Partager les<br />compétences</span></div><div><strong>03</strong><span>Ouvrir les<br />opportunités</span></div></div></section>
       <section className="about-partners"><div className="section-label">Partenariats & investissements</div><h2>Les grandes transformations<br /><span>se construisent à plusieurs.</span></h2><p>Nous sommes ouverts aux collaborations avec les entreprises, institutions, incubateurs, fonds d’investissement et partenaires techniques qui souhaitent soutenir des solutions numériques à fort potentiel au Sénégal et en Afrique.</p><a className="button button-primary" href="/#contact">Devenir partenaire <ArrowRight size={18} /></a></section>
     </main>
-    <footer className="site-footer"><div className="footer-brand"><Logo /><span>© 2026 J@mbAR_Xarala · Dakar, Sénégal</span></div><div className="footer-legal"><span>NINEA : 013031943</span><span>RCCM : SN DKR 2026 A 16508</span><span>Ouakam, Cité ASECNA, Villa n°16</span></div><div className="footer-qr"><QRCodeCanvas value={`${window.location.origin}/a-propos`} size={82} bgColor="#f6f7f2" fgColor="#17201e" level="H" /><span>Scanner pour<br />découvrir JX</span></div><div className="footer-links"><a href="/">Accueil</a><a href="/#contact">Contact</a><a href="#top">Retour en haut ↑</a></div></footer>
+    <footer className="site-footer"><div className="footer-brand"><Logo /><span>© 2026 J@mbAR_Xarala · Dakar, Sénégal</span></div><div className="footer-legal"><span>NINEA : 013031943</span><span>RCCM : SN DKR 2026 A 16508</span><span>Ouakam, Cité ASECNA, Villa n°16</span></div><div className="footer-qr"><QRCodeCanvas value={qrTarget} size={82} bgColor="#f6f7f2" fgColor="#17201e" level="H" /><span>Scanner pour<br />découvrir JX</span></div><div className="footer-links"><a href="/">Accueil</a><a href="/#contact">Contact</a><a href="#top">Retour en haut ↑</a></div></footer>
   </div>
 }
 
