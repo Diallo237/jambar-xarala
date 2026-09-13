@@ -38,3 +38,5 @@
 @media (max-width: 800px) { .professional-site .site-footer { display: flex; } }
 .professional-site .solution-card .tag-list { max-width: calc(100% - 100px); flex-wrap: wrap; }
 .professional-site .solution-card .tag-list span { white-space: nowrap; }
+.professional-site .solution-card .tag-list { bottom: 25px; flex-wrap: nowrap; gap: 5px; max-width: calc(100% - 92px); overflow: visible; }
+.professional-site .solution-card .tag-list span { font-size: 8px; padding: 5px 6px; }
